@@ -1,0 +1,18 @@
+name: SopTNTRun
+main: net.enelson.soptntrun.SopTNTRunPlugin
+version: ${project.version}
+api-version: 1.16
+author: E_NeLsOn
+softdepend:
+  - PlaceholderAPI
+  - SopParty
+commands:
+  tntrun:
+    description: SopTNTRun main command
+    usage: /tntrun
+    aliases: [tr]
+permissions:
+  soptntrun.admin:
+    default: op
+  soptntrun.player:
+    default: true

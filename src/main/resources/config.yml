@@ -1,0 +1,57 @@
+settings:
+  default-min-players: 2
+  default-max-players: 12
+  default-countdown-seconds: 10
+  default-destroy-delay-ticks: 6
+  default-powerup-spawn-interval-seconds: 12
+  default-powerup-despawn-seconds: 8
+  default-feather-jump-velocity: 1.15
+  default-dash-velocity: 1.1
+  default-snowball-knockback-strength: 1.15
+  default-max-active-powerups: 1
+  default-powerup-spawn-radius: 18.0
+  default-powerup-spawn-shape: circle
+  winner-fireworks-enabled: true
+  default-winner-fireworks-interval-ticks: 15
+  default-winner-fireworks-radius: 15.0
+
+global-spawn:
+  world: world
+  x: 0.5
+  y: 80.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+messages:
+  prefix: "&6SopTNTRun &8| &r"
+  arena-created: "&aArena &f{name} &acreated."
+  arena-saved: "&aArena &f{name} &asaved."
+  entered-edit: "&eYou are now editing arena &f{name}&e."
+  left-edit: "&eYou left edit mode."
+  joined-arena: "&aJoined arena &f{name}&a."
+  left-arena: "&eYou left the arena queue."
+  countdown: "&eMatch starts in &f{seconds}&e."
+  match-started: "&aMatch started on &f{name}&a."
+  match-cancelled: "&cCountdown cancelled. Not enough players."
+  eliminated: "&cYou were eliminated."
+  winner: "&6{player} &ewon on arena &f{name}&e."
+  arena-full: "&cThis arena does not have enough free slots."
+  feather-picked-up: "&dYou picked up a feather charge."
+  feather-ready: "&dDouble jump is ready."
+  dash-picked-up: "&6You picked up a dash charge."
+  dash-ready: "&6Dash is ready."
+  snowball-picked-up: "&bYou picked up a knockback snowball."
+  no-arena: "&cArena not found."
+  no-edit: "&cYou are not editing any arena."
+  invalid-number: "&cExpected a valid number."
+  party-no-room: "&cNo arena has enough room for your whole party."
+  random-no-arena: "&cNo available arena found."
+  set-point: "&aSet &f{point} &afor arena &f{name}&a."
+  spawn-setup-started: "&eSpawn setup started. Current slot: &f{slot}&7/&f{max}&e."
+  spawn-setup-next: "&eCurrent spawn slot: &f{slot}&7/&f{max}&e."
+  spawn-setup-finished: "&aAll spawn slots up to &f{max} &aare configured or reviewed."
+  area-setup-started: "&eGameplay area setup started. Set point &f1/2&e."
+  area-setup-step-two: "&eNow set gameplay area point &f2/2&e."
+  area-setup-finished: "&aGameplay area saved."
+  area-setup-missing-first: "&cFirst gameplay area point is missing. Set point 1 first."
