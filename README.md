@@ -29,13 +29,25 @@ Blocks under players break with a delay, the last alive player wins, and elimina
 
 ## Requirements
 
-- Paper `1.16.5+`
-- Java `8+` for the plugin build/runtime target
+- Java `8+`
+- plugin built against the `1.16.5` API baseline
 
 Optional:
 
 - `PlaceholderAPI`
 - `SopParty`
+
+## Build
+
+From repository root:
+
+```bash
+mvn -DskipTests package
+```
+
+Output:
+
+- `target/SopTNTRun.jar`
 
 ## Commands
 
