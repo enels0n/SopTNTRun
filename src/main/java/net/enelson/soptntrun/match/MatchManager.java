@@ -2,6 +2,7 @@ package net.enelson.soptntrun.match;
 
 import net.enelson.soptntrun.SopTNTRunPlugin;
 import net.enelson.soptntrun.arena.ArenaState;
+import net.enelson.soptntrun.event.TntRunFinishEvent;
 import net.enelson.soptntrun.arena.TNTRunArena;
 import net.enelson.soptntrun.listener.ControlItemListener;
 import net.enelson.soptntrun.model.PowerupSpawnShape;
@@ -258,6 +259,7 @@ public final class MatchManager {
         plugin.getStatistics().increment("losses", player.getUniqueId());
         plugin.getStatistics().increment("falls", player.getUniqueId());
         plugin.getMessageService().send(player, "eliminated");
+        Bukkit.getPluginManager().callEvent(new TntRunFinishEvent(player, false));
         restoreAndSendToGlobalSpawn(player);
         if (!match.isEnding() && match.getAliveCount() <= 1) {
             UUID winner = match.getAlivePlayers().isEmpty() ? null : match.getAlivePlayers().iterator().next();
@@ -422,6 +424,7 @@ public final class MatchManager {
             String winnerName = winner == null ? winnerId.toString() : winner.getName();
             broadcast(match.getPlayers(), "winner", replacements("player", winnerName, "name", match.getArena().getName()));
             if (winner != null && winner.isOnline()) {
+                Bukkit.getPluginManager().callEvent(new TntRunFinishEvent(winner, true));
                 Location celebration = getWinnerCelebrationLocation(match.getArena());
                 match.setWinnerCelebrationLocation(celebration);
                 winner.setAllowFlight(true);
